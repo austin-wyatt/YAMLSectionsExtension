@@ -38,7 +38,7 @@ export class YAMLSymbolProvider implements vscode.DocumentSymbolProvider {
         let sectionStart = -1;
         let sectionName = '';
 
-        let objRegex = /^(\w+): {/;
+        let objRegex = /^(\w+):/;
 
         var objLines: {index: number, name: string}[] = [];
 
