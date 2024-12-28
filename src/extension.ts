@@ -49,6 +49,8 @@ export class YAMLSymbolProvider implements vscode.DocumentSymbolProvider {
             for (let objLine of objLines) {
                 section.children.push(new vscode.DocumentSymbol(objLine.name, '', vscode.SymbolKind.Method, new vscode.Range(objLine.index, 0, objLine.index, 0), new vscode.Range(objLine.index, 0, objLine.index, 0)));
             }
+
+            objLines = [];
         }
 
         for (let i = 0; i < lines.length; i++) {
