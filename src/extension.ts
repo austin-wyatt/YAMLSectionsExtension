@@ -60,6 +60,7 @@ export class YAMLSymbolProvider implements vscode.DocumentSymbolProvider {
                 if (sectionStart !== -1) {
                     addSection(i);
                 }
+                objLines = [];
                 sectionStart = i;
                 sectionName = line.substring(9).trim();
             }
